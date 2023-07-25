@@ -1,0 +1,392 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+          <div >
+                    <br/>
+                    <br/>
+                    <br>
+      <div style="color: black;">****** Hover over the rooms to see number of students who have given preference to that room and have higher cgpa than you. ******</div>
+                <table >
+                  <tr>
+                    <td colspan="2" id="walk">  </td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">101</span>
+                      <span class="hoverable__tooltip">{{pref.101}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">102</span>
+                      <span class="hoverable__tooltip">{{pref.102}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">103</span>
+                      <span class="hoverable__tooltip">{{pref.103}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">104</span>
+                      <span class="hoverable__tooltip">{{pref.104}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">105</span>
+                      <span class="hoverable__tooltip">{{pref.105}} students</span>
+                    </div></td>
+                    <td colspan="2" id="walk">  </td>
+                  </tr>
+
+                  <br/>
+
+                  <tr>
+                    <td colspan="2" id="walk">  </td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">106</span>
+                      <span class="hoverable__tooltip">{{pref.106}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">107</span>
+                      <span class="hoverable__tooltip">{{pref.107}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">108</span>
+                      <span class="hoverable__tooltip">{{pref.108}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">109</span>
+                      <span class="hoverable__tooltip">{{pref.109}} students</span>
+                    </div></td>
+                    <td><div class="hoverable" id="seat">
+                      <span class="hoverable__main">110</span>
+                      <span class="hoverable__tooltip">{{pref.110}} students</span>
+                    </div></td>
+                    <td colspan="2" id="walk">  </td>
+                  </tr>
+
+              {% comment %} <tr>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td><div rowspan="2" id="bathroom">B</div> </td>
+                  <td id="walk">  </td>
+                  <td ><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td ><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td ><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div rowspan="2" id="bathroom">B</div> </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+                <td colspan="33" id="walk">  </td>
+              </tr>
+
+              <tr>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td colspan="6" id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td colspan="6" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td colspan="3" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="21" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="3" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td colspan="3" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="21" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="3" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="4" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="27" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="27" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td colspan="3" id="walk">  </td>
+                  <td><div id="seatS" class="5414" data-toggle="tooltip" data-placement="right" title="5414">14</div></td>
+                  <td colspan="21" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="3" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS"  class="5413" data-toggle="tooltip" data-placement="right" title="5413">13</div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td colspan="3" id="walk">  </td>
+                  <td><div id="seatS" class="5412" data-toggle="tooltip" data-placement="right" title="5412">12</div></td>
+                  <td colspan="21" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td colspan="3" id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+              <tr>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seatS" class="5411" data-toggle="tooltip" data-placement="right" title="5411">11</div></td>
+                  <td colspan="25" id="walk">  </td>
+                  <td><div id="seatS"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td colspan="6" id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5406" data-toggle="tooltip" data-placement="right" title="5406">06</div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5404" data-toggle="tooltip" data-placement="right" title="5404">04</div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5402" data-toggle="tooltip" data-placement="right" title="5402">02</div></td>
+                  <td colspan="5" id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td colspan="8" id="walk">  </td>
+                  <td id="walk">  </td>
+                </tr>
+
+            <tr>
+                  <td colspan="33" id="walk">  </td>
+            </tr>
+
+
+            <tr>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+              <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div rowspan="2" id="bathroom">B</div> </td>
+                  <td><div id="seat" class="5410" data-toggle="tooltip" data-placement="right" title="5410">10</div></td>
+                  <td><div id="seat" class="5409" data-toggle="tooltip" data-placement="right" title="5409">09</div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5407" data-toggle="tooltip" data-placement="right" title="5407">07</div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5405" data-toggle="tooltip" data-placement="right" title="5405">05</div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5403" data-toggle="tooltip" data-placement="right" title="5403">03</div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat" class="5401" data-toggle="tooltip" data-placement="right" title="5401">01</div></td>
+                  <td colspan="3" id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td><div id="seat"></div></td>
+                  <td><div rowspan="2" id="bathroom">B</div> </td>
+                  <td id="walk">  </td>
+                  <td id="walk">  </td>
+              </tr>
+
+
+
+              <tr>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                <td id="walk">  </td>
+                  <td colspan="5" id="walk">  </td>
+                  <td><div id="seat" class="5408" data-toggle="tooltip" data-placement="right" title="5408">08</div></td>
+                  <td colspan="8" id="walk">  </td>
+                  <td><div id="block"><b>Gate</b></div></td>
+                  <td colspan="8" id="walk">  </td>
+                  <td><div id="seat"></div></td>
+                  <td colspan="5" id="walk">  </td>
+                  <td id="walk">  </td>
+            </tr>
+
+
+
+            <tr>
+              <td colspan="33" id="walk">  </td>
+            </tr>
+
+
+            <tr>
+              <td colspan="33" id="walk">  </td>
+            </tr>
+
+
+            <tr>
+              <td colspan="33" id="walk">  </td>
+            </tr> {% endcomment %}
+
+          </table>
+        </div>
+</div>
+<form method="post" class="post-form" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="fields"> Preference 1 <br><br> {{ form.preference1 }}</div>
+  <div class="fields"> Preference 2 <br><br> {{ form.preference2 }}</div>
+  <div class="fields"> Preference 3 <br><br> {{ form.preference3 }}</div>
+  <div class="fields"> Preference 4 <br><br> {{ form.preference4 }}</div>
+  <div class="fields"> Preference 5 <br><br> {{ form.preference5 }}</div>
+  <button type="submit" class="save btn btn-default" style="margin-top: 20px;">Save</button>
+</form>
+<ul>
+</ul>
+{% endblock content %}
+{% block more_links %}
+        <a href="{% url 'student_profile' %}">
+            Profile
+        </a>
+        <a href="{% url 'logout' %}">
+            Logout
+        </a>
+{% endblock more_links %}
+

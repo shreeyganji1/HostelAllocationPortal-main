@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+    
+        <div class="wrapper">
+        {% for student in students %}
+            
+            {% if not student.documnets_aproved and student.documnets_uploaded%}
+                <div class="table">
+
+                    <div class="row">
+                        <div class="cell">
+                            Student Name
+                        </div>
+                        <div class="cell">
+                            {{ student.student_name }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            Enrollment Number
+                        </div>
+                        <div class="cell">
+                            {{ student.enrollment_no }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            Course
+                        </div>
+                        <div class="cell">
+                            {{ student.course }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            Aadhar Card
+                        </div>
+                        <div class="cell">
+                            <a href={{ student.aadharCard }}> Link for Aadhar Card Document </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            Photo Id
+                        </div>
+                        <div class="cell">
+                            <a href={{ student.photoId }}> Link for  Photo Id Document </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            Fee Reciept
+                        </div>
+                        <div class="cell">
+                            <a href={{ student.feeReciept }}> Link for  Fee Reciept Document </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            Approve
+                        </div>
+                        <div class="cell">
+                            {% for field in form %}
+                                {% if field.label == student.enrollment_no %}
+                                    {{ field }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            
+        {% endfor %}
+        <button type="submit" class="save btn btn-default" style="margin-top: 20px;">Save</button>
+        </div>
+    </form>
+    
+
+{% endblock content %}
+
+
+{% block more_links %}
+    <a href="{% url 'warden_profile' %}">
+        Profile
+    </a>
+    <a href="{% url 'warden_add_due' %}">
+        Add Due
+    </a>
+    <a href="{% url 'warden_remove_due' %}">
+        Remove Due
+    </a>
+    <a href="{% url 'logout' %}">
+        Logout
+    </a>
+{% endblock more_links %}
